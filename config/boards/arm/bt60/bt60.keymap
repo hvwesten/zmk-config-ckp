@@ -31,16 +31,16 @@
 				// ------------------------------------------------------------------------------------------
 				// |  GRAVE   |  F1 	|  F2  |  F3  |  F4  |  F5  |  F6  |  F7  |  F8  | F9  |  F10  | F11 | F12 | DEL
 				// |  	-     | BT_CLR  |   UP   |  -  |  -  |  -  |  -  |  -  |  UP  |  INS  |  PSCRN  |  SLCK  |  PAUSE_BREAK  | RGB_TOG  |
-				// |    -  	  |  LEFT   |  DOWN  |  RIGHT  |  BT_SEL 0  |  BT_SEL 1  |  -  |  LEFT |  DOWN  |  RIGHT |  -  |  PG_UP  |     &bootloader
-				// |  &kp LSHFT  |  C_VOL_DN |  C_VOL_UP  |  C_MUTE  |  OUT_TOG  |  OUT_USB  |  -  |  -  |  C_PREVIOUS  |  C_NEXT  | PG_DN   |   -
+				// |    -  	  |  LEFT   |  DOWN  |  RIGHT  |  BT_SEL 0  |  BT_SEL 1  |  -  |  LEFT |  DOWN  |  RIGHT |  -  |  PG_UP  | -
+				// |  &kp LSHFT  |  C_VOL_DN |  C_VOL_UP  |  C_MUTE  |  OUT_TOG  |  OUT_USB  |  &bootloader  |  -  |  C_PREVIOUS  |  C_NEXT  | PG_DN   |   -
 				// |  BT_PRV  |  BT_NXT  |  RESET  |            -               |  -   |  HOME   |     - |  END
 				// ------------------------------------------------------------------------------------------
 				
 			bindings = <
 				&kp GRAVE &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12 &kp DEL
 				&trans &bt BT_CLR  &kp UP &trans &trans &trans &trans &trans &kp UP &kp INS &kp PSCRN &kp SLCK &kp PAUSE_BREAK &rgb_ug RGB_TOG
-				&trans  &kp LEFT &kp DOWN &kp RIGHT &bt BT_SEL 0 &bt BT_SEL 1 &trans &kp LEFT &kp DOWN &kp RIGHT &trans  &kp PG_UP   &bootloader
-				&kp LSHFT &kp C_VOL_DN &kp C_VOL_UP &kp C_MUTE &out OUT_TOG &out OUT_USB  &trans &trans &kp C_PREVIOUS  &kp C_NEXT &kp PG_DN  &trans
+				&trans  &kp LEFT &kp DOWN &kp RIGHT &bt BT_SEL 0 &bt BT_SEL 1 &trans &kp LEFT &kp DOWN &kp RIGHT &trans  &kp PG_UP   &trans
+				&kp LSHFT &kp C_VOL_DN &kp C_VOL_UP &kp C_MUTE &out OUT_TOG &out OUT_USB  &bootloader &trans &kp C_PREVIOUS  &kp C_NEXT &kp PG_DN  &trans
 				&bt BT_PRV &bt BT_NXT  &reset              &trans                            &trans &kp HOME  &trans &kp END 
 			>;
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
